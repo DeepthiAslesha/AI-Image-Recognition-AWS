@@ -1,1 +1,0 @@
-# AI-Image-Recognition-AWS
