@@ -1,0 +1,55 @@
+AI-Powered Image Recognition System Using AWS Rekognition
+1. Introduction
+Our team is developing an AI-powered image recognition system using AWS Rekognition. This system will analyze and categorize images, providing insights such as object detection, facial recognition, and text extraction.
+2. Project Objectives
+- Implement AWS Rekognition for image analysis.
+- Allow users to upload images via APIs.
+- Process and return results such as labels, faces, and text.
+- Store image metadata and analysis results in PostgreSQL.
+- Ensure secure user authentication and API access.
+3. System Architecture
+3.1 Components
+**Frontend:** Web interface (HTML, CSS, JavaScript) for image uploads.
+**Backend:** Flask-based API handling requests which are integrated with AWS Rekognition.
+**Database:** PostgreSQL for storing user data, image details, and recognition results.
+**AWS Services:**
+  - AWS S3 (for storing uploaded images).
+  - AWS Rekognition (for image analysis).
+3.2 Workflow
+1. User uploads an image through the web interface.
+1. The image is stored in an AWS S3 bucket.
+1. The Flask API sends the image to AWS Rekognition.
+1. Rekognition analyzes the image and returns insights.
+1. The results are stored in PostgreSQL.
+1. The user receives the analysis output via the web interface or API response.
+4. Technical Requirements
+4.1 Backend Requirements
+- Flask Framework
+- PostgreSQL Database
+- AWS SDK for Python (Boto3)
+- API integration with AWS Rekognition and S3
+4.2 Frontend Requirements
+- HTML, CSS, JavaScript
+- Fetch API or Axios for API calls
+- User authentication UI
+4.3 AWS Requirements
+- AWS S3 Bucket (to store images)
+- AWS Rekognition API access
+- IAM roles for secure access
+5. API Endpoints
+EndpointMethodDescription/uploadPOSTUpload an image to S3 and process it with Rekognition/results/<image_id>GETRetrieve analysis results for a specific image/user/registerPOSTRegister a new user/user/loginPOSTAuthenticate and generate an access token6. Security Measures
+**AWS IAM Roles & Policies**: Secure access to AWS services.
+**Authentication & Authorization**: JWT-based authentication for API access.
+**Data Encryption**: Secure storage for images and results.
+7. Expected Outcomes
+- A fully functional AI-powered image recognition system.
+- Secure and efficient API handling for image analysis.
+- A web interface for user interaction.
+8. Amazon Rekognition Image pricing
+Amazon Rekognition Image makes it easy to add image analysis to your applications using proven, highly scalable, deep learning technology that requires no machine learning expertise to use. With Amazon Rekognition Image, you only pay for what you use. 
+There is no up-front commitment or minimum fee. There are two types of costs with Amazon Rekognition Image: the cost for image analysis and the cost for face metadata storage.
+Image analysis: Amazon Rekognition Image charges you each time you analyze an image using our APIs. Running multiple APIs against a single image counts as processing multiple images. Usage is billed based on a tiered pricing model tied to volume of images processed per month. The majority of Amazon Rekognition Image APIs are categorized into two groups, Group 1 and Group 2, which have different pricing.
+Group1: AssociateFaces, CompareFaces, DisassociateFaces, IndexFaces, SearchFacesbyImage, SearchFaces, SearchUsersByImage, SearchUsers.
+Group 2: DetectFaces, DetectModerationLabels, DetectLabels, DetectText, RecognizeCelebrities, DetectProtectiveEquipment APIs.
+Other than the APIs listed in Group 1 and Group 2 above, Amazon Rekognition Image also supports Image Properties, which is priced separately from Group 1 and Group 2.
+
